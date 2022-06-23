@@ -59,5 +59,4 @@ jobs:
         context: .
         push: true
         tags: |
-          jimmygc/aria2-pro:test
           ghcr.io/jimmygc/aria2-pro:test

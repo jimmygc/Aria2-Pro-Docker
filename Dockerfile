@@ -15,6 +15,8 @@ FROM p3terx/s6-alpine
 
 RUN apk add --no-cache jq findutils && \
     curl -fsSL 'https://github.com/jimmygc/Aria2-Pro-Core/raw/master/aria2-install.sh' | bash && \
+    mkdir -p /usr/share/GeoIP \
+    curl -fsSL 'https://mailfud.org/geoip-legacy/GeoIP.dat.gz' | gunzip > /usr/share/GeoIP/GeoIP.dat \
     rm -rf /var/cache/apk/* /tmp/*
 
 COPY rootfs /
